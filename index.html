@@ -1,0 +1,1941 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Mahasiswa S1 Pendidikan Teknologi Informasi UNESA">
+  <title>Taufiq Mahdi Wafy — Portofolio Resmi</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  <style>/* ==========================================================================
+   WAHA / WAFY PORTFOLIO MODERN DESIGN SYSTEM (Anti-slop, High Performance)
+   ========================================================================== */
+
+:root {
+  color-scheme: light dark;
+  --font-sans: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Light Palette */
+  --bg-canvas: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-surface-elevated: #ffffff;
+  --bg-subtle: #f1f5f9;
+  --bg-hover: #e2e8f0;
+  --border-subtle: #e2e8f0;
+  --border-strong: #cbd5e1;
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --text-faint: #64748b;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --accent-subtle: #eff6ff;
+  --accent-border: #bfdbfe;
+  --accent-text: #1e40af;
+  --badge-bg: #dbeafe;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.07);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.08);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+  --header-height: 72px;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg-canvas: #090d16;
+  --bg-surface: #111827;
+  --bg-surface-elevated: #1a2234;
+  --bg-subtle: #1e293b;
+  --bg-hover: #2d3748;
+  --border-subtle: #1e293b;
+  --border-strong: #334155;
+  --text-main: #f8fafc;
+  --text-muted: #cbd5e1;
+  --text-faint: #94a3b8;
+  --accent: #3b82f6;
+  --accent-hover: #60a5fa;
+  --accent-subtle: #172554;
+  --accent-border: #1e3a8a;
+  --accent-text: #93c5fd;
+  --badge-bg: #1e293b;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.4);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.35);
+  --shadow-lg: 0 10px 20px -3px rgb(0 0 0 / 0.45);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg-canvas: #090d16;
+    --bg-surface: #111827;
+    --bg-surface-elevated: #1a2234;
+    --bg-subtle: #1e293b;
+    --bg-hover: #2d3748;
+    --border-subtle: #1e293b;
+    --border-strong: #334155;
+    --text-main: #f8fafc;
+    --text-muted: #cbd5e1;
+    --text-faint: #94a3b8;
+    --accent: #3b82f6;
+    --accent-hover: #60a5fa;
+    --accent-subtle: #172554;
+    --accent-border: #1e3a8a;
+    --accent-text: #93c5fd;
+    --badge-bg: #1e293b;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.4);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.35);
+    --shadow-lg: 0 10px 20px -3px rgb(0 0 0 / 0.45);
+  }
+}
+
+/* Reset & Box Sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height) + 24px);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-canvas);
+  color: var(--text-main);
+  line-height: 1.6;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -999px;
+  left: 16px;
+  background: var(--accent);
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: var(--radius-sm);
+  z-index: 9999;
+  font-weight: 600;
+}
+.skip-link:focus {
+  top: 16px;
+}
+
+/* ==========================================================================
+   NAVIGATION BAR (Glassmorphism & Highly Responsive)
+   ========================================================================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg-surface);
+  background: color-mix(in srgb, var(--bg-surface) 85%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-subtle);
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.header-inner {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: -0.03em;
+}
+
+.brand-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--accent);
+  flex-shrink: 0;
+  background: var(--bg-subtle);
+}
+
+.brand-name .dot {
+  color: var(--accent);
+}
+
+.desktop-nav {
+  display: none;
+  align-items: center;
+  gap: 4px;
+}
+
+@media (min-width: 860px) {
+  .desktop-nav {
+    display: flex;
+  }
+}
+
+.nav-item {
+  padding: 8px 14px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  border-radius: var(--radius-full);
+  transition: all 0.15s ease;
+}
+
+.nav-item:hover {
+  color: var(--text-main);
+  background: var(--bg-subtle);
+}
+
+.nav-item.active {
+  color: var(--accent);
+  background: var(--accent-subtle);
+  font-weight: 600;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.theme-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-surface-elevated);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  transition: all 0.15s ease;
+}
+
+.theme-btn:hover {
+  border-color: var(--border-strong);
+  color: var(--text-main);
+}
+
+.mobile-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-surface-elevated);
+}
+
+@media (min-width: 860px) {
+  .mobile-toggle {
+    display: none;
+  }
+}
+
+.burger-line {
+  width: 100%;
+  height: 2px;
+  background-color: var(--text-main);
+  border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* Mobile Drawer */
+.mobile-drawer {
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: color-mix(in srgb, var(--bg-surface) 96%, transparent);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  z-index: 99;
+  padding: 24px 20px;
+  border-bottom: 1px solid var(--border-subtle);
+  animation: drawerSlide 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow-y: auto;
+}
+
+@keyframes drawerSlide {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mob-nav-item {
+  padding: 14px 18px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-main);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-surface-elevated);
+  transition: background 0.15s ease;
+}
+
+.mob-nav-item:active, .mob-nav-item.active {
+  background: var(--accent-subtle);
+  color: var(--accent);
+  border-color: var(--accent-border);
+}
+
+/* ==========================================================================
+   MAIN CONTAINER & SECTIONS
+   ========================================================================== */
+.site-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 20px 80px;
+}
+
+.section {
+  margin-bottom: 72px;
+}
+
+.section-header {
+  margin-bottom: 28px;
+}
+
+.section-kicker {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3.5vw, 2.1rem);
+  font-weight: 700;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+
+.section-desc {
+  font-size: 1rem;
+  color: var(--text-muted);
+  max-width: 65ch;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   HERO / PROFIL SECTION
+   ========================================================================== */
+.hero-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .hero-card {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 40px 36px;
+    gap: 40px;
+  }
+}
+
+.hero-avatar-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.avatar-frame {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid var(--bg-surface-elevated);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  background: var(--bg-subtle);
+}
+
+@media (min-width: 768px) {
+  .avatar-frame {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-badge-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.status-ping {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #10b981;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
+}
+
+.hero-text-wrap {
+  flex: 1;
+}
+
+.hero-tagline {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+.hero-name {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 2.7rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--text-main);
+  line-height: 1.15;
+  margin-bottom: 8px;
+}
+
+.hero-headline {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-main);
+  line-height: 1.45;
+  margin-bottom: 14px;
+}
+
+.hero-meta-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.hero-bio {
+  font-size: 0.98rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin-bottom: 10px;
+}
+
+.hero-sub-bio {
+  font-size: 0.92rem;
+  color: var(--text-faint);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.hero-cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  color: #ffffff;
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+}
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: var(--bg-subtle);
+  color: var(--text-main);
+  border: 1px solid var(--border-subtle);
+}
+.btn-secondary:hover {
+  background-color: var(--bg-hover);
+  border-color: var(--border-strong);
+}
+
+.btn-outline {
+  border: 1px solid var(--border-strong);
+  color: var(--text-main);
+}
+.btn-outline:hover {
+  background-color: var(--bg-subtle);
+}
+
+/* ==========================================================================
+   CARDS GRID (Organisasi & Kepanitiaan)
+   ========================================================================== */
+.cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.experience-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.experience-card:hover {
+  border-color: var(--accent-border);
+  box-shadow: var(--shadow-md);
+}
+
+.card-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.year-badge {
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  background: var(--bg-subtle);
+  color: var(--text-muted);
+  border: 1px solid var(--border-subtle);
+}
+
+.year-badge.highlight {
+  background: var(--accent-subtle);
+  color: var(--accent-text);
+  border-color: var(--accent-border);
+}
+
+.org-category-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-faint);
+}
+
+.role-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+}
+
+.org-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.role-summary {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+.duties-list {
+  background: var(--bg-subtle);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  margin-bottom: 16px;
+  font-size: 0.88rem;
+  color: var(--text-main);
+}
+
+.duties-heading {
+  display: block;
+  font-weight: 700;
+  font-size: 0.82rem;
+  color: var(--text-faint);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.duties-list ul {
+  padding-left: 18px;
+}
+
+.duties-list li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+.duties-list li:last-child {
+  margin-bottom: 0;
+}
+
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.chip {
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  background: var(--bg-subtle);
+  color: var(--text-muted);
+  border: 1px solid var(--border-subtle);
+}
+
+.chip.event-chip {
+  background: var(--accent-subtle);
+  color: var(--accent-text);
+  border-color: var(--accent-border);
+}
+
+/* ==========================================================================
+   SERTIFIKASI GRID & FILTER (Highlight Feature)
+   ========================================================================== */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.filter-btn {
+  padding: 8px 18px;
+  border-radius: var(--radius-full);
+  font-size: 0.88rem;
+  font-weight: 600;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-surface);
+  color: var(--text-muted);
+  transition: all 0.15s ease;
+}
+
+.filter-btn:hover {
+  border-color: var(--border-strong);
+  color: var(--text-main);
+}
+
+.filter-btn.active {
+  background: var(--accent);
+  color: #ffffff;
+  border-color: var(--accent);
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.25);
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 680px) {
+  .cert-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1040px) {
+  .cert-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.cert-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-border);
+  box-shadow: var(--shadow-md);
+}
+
+.cert-card.hidden {
+  display: none;
+}
+
+.cert-media-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background: var(--bg-subtle);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.cert-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cert-media-wrap:hover .cert-img {
+  transform: scale(1.03);
+}
+
+.enlarge-btn {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: color-mix(in srgb, #000000 70%, transparent);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0.9;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.enlarge-btn:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.cert-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--text-faint);
+  font-size: 0.88rem;
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.cert-body {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.cert-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.cert-year {
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  background: var(--bg-subtle);
+  color: var(--text-muted);
+}
+
+.cert-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.cert-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.35;
+  margin-bottom: 6px;
+}
+
+.cert-issuer {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-faint);
+  margin-bottom: 12px;
+}
+
+.cert-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+/* ==========================================================================
+   PENDIDIKAN & KEAHLIAN & KONTAK
+   ========================================================================== */
+.edu-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .edu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.edu-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+}
+
+.edu-role {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+
+.edu-org {
+  font-size: 0.92rem;
+  color: var(--accent);
+  margin-bottom: 14px;
+}
+
+.edu-card ul {
+  padding-left: 18px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.skill-category-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+}
+
+.skill-cat-title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 14px;
+}
+
+.skill-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-pill {
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: var(--radius-md);
+  background: var(--bg-subtle);
+  color: var(--text-main);
+  border: 1px solid var(--border-subtle);
+}
+
+.contact-links-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 600px;
+}
+
+.contact-pill-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-radius: var(--radius-md);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  font-weight: 600;
+  color: var(--text-main);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.15s ease;
+}
+
+.contact-pill-btn:hover {
+  border-color: var(--accent);
+  background: var(--accent-subtle);
+  color: var(--accent-text);
+  transform: translateX(4px);
+}
+
+.contact-value {
+  font-size: 0.88rem;
+  color: var(--text-faint);
+}
+
+/* ==========================================================================
+   ACCESSIBLE LIGHTBOX DIALOG
+   ========================================================================== */
+.lightbox-modal {
+  border: none;
+  background: transparent;
+  padding: 0;
+  max-width: 100vw;
+  max-height: 100vh;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.lightbox-modal[open] {
+  display: flex;
+}
+
+.lightbox-modal::backdrop {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(8px);
+}
+
+.lightbox-container {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  max-width: 900px;
+  width: calc(100% - 32px);
+  max-height: calc(100vh - 48px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  animation: modalPop 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modalPop {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.lightbox-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.lightbox-title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-main);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-right: 12px;
+}
+
+.lightbox-close-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.lightbox-close-btn:hover {
+  background: var(--bg-subtle);
+  color: var(--text-main);
+}
+
+.lightbox-body {
+  padding: 16px;
+  overflow-y: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-subtle);
+}
+
+.lightbox-img-wrap {
+  width: 100%;
+  max-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-img {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-md);
+}
+
+.lightbox-footer {
+  padding: 12px 20px;
+  border-top: 1px solid var(--border-subtle);
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-faint);
+}
+
+/* Skeleton Loading Effect */
+.skeleton-loader {
+  background: linear-gradient(
+    90deg,
+    var(--bg-subtle) 25%,
+    var(--bg-hover) 50%,
+    var(--bg-subtle) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeletonPulse 1.5s infinite ease-in-out;
+}
+
+@keyframes skeletonPulse {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--border-subtle);
+  background: var(--bg-surface);
+  padding: 32px 20px;
+  margin-top: 40px;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+@media (min-width: 640px) {
+  .footer-inner {
+    flex-direction: row;
+  }
+}
+
+.back-to-top-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  color: var(--accent);
+}
+</style>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main-content">Lewati ke konten utama</a>
+
+  <!-- Navigation Header -->
+  <header class="site-header" id="navbar">
+    <div class="header-inner">
+      <a href="#top" class="brand-logo" aria-label="Wafy, kembali ke paling atas">
+        <span class="brand-avatar">
+          <img src="./assets/wafy_profile.webp" alt="Wafy" width="36" height="36">
+        </span>
+        <span class="brand-name">Wafy<span class="dot">.</span></span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" aria-label="Navigasi Utama">
+        <a href="#profil" class="nav-item">Profil</a><a href="#proyek" class="nav-item">Karya & Proyek</a><a href="#keterampilan" class="nav-item">Keahlian</a><a href="#sertifikasi" class="nav-item">Prestasi</a><a href="#organisasi" class="nav-item">Organisasi</a><a href="#kepanitiaan" class="nav-item">Kepanitiaan</a><a href="#pendidikan" class="nav-item">Pendidikan</a><a href="#kontak" class="nav-item">Kontak</a>
+      </nav>
+
+      <!-- Action Area -->
+      <div class="header-actions">
+        <button type="button" class="theme-btn" id="themeToggle" aria-label="Ganti tema mode">
+          <span class="theme-icon" aria-hidden="true">◐</span>
+          <span class="theme-text" id="themeText">Tema</span>
+        </button>
+        <button type="button" class="mobile-toggle" id="mobileMenuBtn" aria-expanded="false" aria-controls="mobileDrawer" aria-label="Buka menu navigasi">
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobileDrawer" hidden>
+    <nav class="mobile-nav" aria-label="Navigasi Ponsel">
+      <a href="#profil" class="mob-nav-item">Profil</a><a href="#proyek" class="mob-nav-item">Karya & Proyek</a><a href="#keterampilan" class="mob-nav-item">Keahlian</a><a href="#sertifikasi" class="mob-nav-item">Prestasi</a><a href="#organisasi" class="mob-nav-item">Organisasi</a><a href="#kepanitiaan" class="mob-nav-item">Kepanitiaan</a><a href="#pendidikan" class="mob-nav-item">Pendidikan</a><a href="#kontak" class="mob-nav-item">Kontak</a>
+    </nav>
+  </div>
+
+  <!-- Main Container -->
+  <main id="main-content" class="site-main" tabindex="-1">
+    
+    <!-- Hero / Profil Section -->
+    <section id="profil" class="section hero-section" aria-labelledby="hero-title">
+      <div class="hero-card">
+        <div class="hero-avatar-wrap">
+          <div class="avatar-frame skeleton-loader" id="avatarSkeleton">
+            <img src="./assets/wafy_profile.webp" alt="Foto Resmi Taufiq Mahdi Wafy" class="avatar-img" width="200" height="200" onload="this.parentElement.classList.remove('skeleton-loader')">
+          </div>
+          <div class="hero-badge-status">
+            <span class="status-ping" aria-hidden="true"></span>
+            <span>Aktif Kuliah & Organisasi</span>
+          </div>
+        </div>
+
+        <div class="hero-text-wrap">
+          <h1 id="hero-title" class="hero-name">Taufiq Mahdi Wafy</h1>
+          <p class="hero-headline">Mahasiswa S1 Pendidikan Teknologi Informasi UNESA</p>
+          <div class="hero-meta-strip">
+            <span class="meta-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              NIM: <strong>26050974056</strong>
+            </span>
+            <span class="meta-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              S1 Pendidikan Teknologi Informasi (PTI 2026D)
+            </span>
+            <span class="meta-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 000 20 14.5 14.5 0 000-20"/><path d="M2 12h20"/></svg>
+              Kelompok 17_Subnet • Ameliorer 11 UNESA
+            </span>
+            <span class="meta-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Jombang / Surabaya, Jawa Timur
+            </span>
+          </div>
+          <p class="hero-bio">Mahasiswa S1 Pendidikan Teknologi Informasi Universitas Negeri Surabaya (UNESA). Berpengalaman dalam administrasi organisasi, tata kelola persuratan, notulensi rapat, dan pengarsipan digital di lingkungan sekolah dan pesantren.</p>
+          
+          <div class="hero-cta-group">
+            <a href="#proyek" class="btn btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+              Lihat Karya & Proyek
+            </a>
+            <a href="./assets/cv/CV_ATS_Taufiq_Mahdi_Wafy.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              Unduh CV ATS
+            </a>
+            <a href="#sertifikasi" class="btn btn-secondary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+              Prestasi
+            </a>
+            <a href="#kontak" class="btn btn-outline">
+              Hubungi
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Gallery / Proyek & Karya Section -->
+    <section id="proyek" class="section" aria-labelledby="heading-proyek">
+      <div class="section-header">
+        <span class="section-kicker">Work Gallery & Proyek</span>
+        <h2 id="heading-proyek" class="section-title">Karya & Rekayasa Perangkat Lunak</h2>
+        <p class="section-desc">Implementasi nyata aplikasi, otomasi sistem, dan platform digital berbasis web & API.</p>
+      </div>
+      <div class="cards-grid">
+        <article class="experience-card" data-index="0">
+          <div class="card-header-bar">
+            <span class="year-badge highlight">2026</span>
+            <span class="org-category-tag">Web & PWA App</span>
+          </div>
+          <h3 class="role-title">Dompetku — Personal Finance & Smart OCR Ingest</h3>
+          <h4 class="org-title">FastAPI • Next.js • Tailwind CSS • WhatsApp Bridge • SQLite</h4>
+          <p class="role-summary">Aplikasi Progressive Web App (PWA) pencatatan keuangan pribadi ultra-ringan dengan latensi sub-25ms dan otomasi penerimaan bukti struk belanja berbasis OCR melalui WhatsApp.</p>
+          <div class="duties-list">
+            <span class="duties-heading">Fitur & Arsitektur Utama:</span>
+            <ul>
+              <li>Otomasi pencatatan transaksi instan dari pesan chat WhatsApp via wameow bridge dan Vision OCR.</li>
+              <li>Integrasi backend performa tinggi dengan FastAPI, model data Pydantic, dan database SQLite terindeks.</li>
+              <li>Tampilan dashboard analitik visual pengeluaran bulanan dan manajemen multi-dompet yang responsif.</li>
+            </ul>
+          </div>
+          <div class="tag-cloud">
+            <span class="chip">Next.js PWA</span>
+            <span class="chip">FastAPI</span>
+            <span class="chip">WhatsApp OCR</span>
+            <span class="chip">Tailwind CSS</span>
+            <span class="chip">Personal Finance</span>
+          </div>
+        </article>
+
+        <article class="experience-card" data-index="1">
+          <div class="card-header-bar">
+            <span class="year-badge highlight">2026</span>
+            <span class="org-category-tag">Campus Web Portal</span>
+          </div>
+          <h3 class="role-title">Portal Voting Bahan PDH Informatika 2026</h3>
+          <h4 class="org-title">FastAPI • Cloudflare Worker • SSO Google UNESA • Caddy</h4>
+          <p class="role-summary">Sistem pemungutan suara resmi satu angkatan Informatika UNESA 2026 untuk menentukan pilihan bahan baju angkatan (American, Japan, Nagata Drill) secara transparan dan aman.</p>
+          <div class="duties-list">
+            <span class="duties-heading">Fitur & Arsitektur Utama:</span>
+            <ul>
+              <li>Autentikasi ketat akun kampus SSO UNESA (@mhs.unesa.ac.id) untuk menjamin 1 mahasiswa 1 suara sah.</li>
+              <li>Rekapitulasi perolehan suara real-time dengan audit log dan pencegahan manipulasi pemungutan suara.</li>
+              <li>Deployment handal di sub-domain resmi angkatan (informatics26.my.id/vote) dengan Cloudflare CDN.</li>
+            </ul>
+          </div>
+          <div class="tag-cloud">
+            <span class="chip">SSO UNESA</span>
+            <span class="chip">Cloudflare Edge</span>
+            <span class="chip">FastAPI</span>
+            <span class="chip">Audited Voting</span>
+            <span class="chip">Informatika 2026</span>
+          </div>
+        </article>
+
+        <article class="experience-card" data-index="2">
+          <div class="card-header-bar">
+            <span class="year-badge">2026</span>
+            <span class="org-category-tag">DevOps & Cloud</span>
+          </div>
+          <h3 class="role-title">Cloudify API & VansRouter — High-Availability LLM Proxy</h3>
+          <h4 class="org-title">Python • Caddy Reverse Proxy • Cloudflare Tunnel • Systemd</h4>
+          <p class="role-summary">Gerbang proxy AI redundan berlatensi rendah yang memadukan puluhan provider model kecerdasan buatan dengan mekanisme failover otomatis dan token-saving routing.</p>
+          <div class="duties-list">
+            <span class="duties-heading">Fitur & Arsitektur Utama:</span>
+            <ul>
+              <li>Failover otomatis lintas provider upstream ketika terjadi limit kuota atau timeout koneksi.</li>
+              <li>Monitoring kesehatan rute (healthcheck), penyeimbangan beban (load balancing), dan kompresi payload.</li>
+              <li>Pengoperasian 24/7 di server mandiri dengan Caddy SSL otomatis dan Cloudflare Tunnel ingress.</li>
+            </ul>
+          </div>
+          <div class="tag-cloud">
+            <span class="chip">Reverse Proxy</span>
+            <span class="chip">High Availability</span>
+            <span class="chip">Caddy</span>
+            <span class="chip">Cloudflare Tunnel</span>
+            <span class="chip">AI Architecture</span>
+          </div>
+        </article>
+
+        <article class="experience-card" data-index="3">
+          <div class="card-header-bar">
+            <span class="year-badge">2026</span>
+            <span class="org-category-tag">Simulasi Akademik</span>
+          </div>
+          <h3 class="role-title">CPU & OS Process Scheduling Simulator</h3>
+          <h4 class="org-title">TypeScript • Vite • Canvas API • Tailwind CSS</h4>
+          <p class="role-summary">Simulator interaktif berbasis web untuk memvisualisasikan algoritma penjadwalan proses sistem operasi (FCFS, SJF, Round Robin, Priority Scheduling) beserta diagram Gantt.</p>
+          <div class="duties-list">
+            <span class="duties-heading">Fitur & Arsitektur Utama:</span>
+            <ul>
+              <li>Visualisasi diagram Gantt real-time dari timeline eksekusi CPU dan antrean status proses.</li>
+              <li>Kalkulasi otomatis metrik performa: Average Waiting Time (AWT) dan Turnaround Time (TAT).</li>
+              <li>Desain interaktif untuk media pembelajaran praktikum sistem operasi bagi mahasiswa informatika.</li>
+            </ul>
+          </div>
+          <div class="tag-cloud">
+            <span class="chip">Sistem Operasi</span>
+            <span class="chip">Scheduling Queue</span>
+            <span class="chip">Gantt Chart</span>
+            <span class="chip">TypeScript</span>
+            <span class="chip">Vite SPA</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Organisasi Section -->
+    <section id="organisasi" class="section" aria-labelledby="heading-organisasi">
+      <div class="section-header">
+        <h2 id="heading-organisasi" class="section-title">Pengalaman Organisasi</h2>
+        <p class="section-desc">Pengalaman dalam kesekretariatan, persuratan, dan kehumasan.</p>
+      </div>
+      <div class="cards-grid">
+        <article class="experience-card" data-index="0">
+      <div class="card-header-bar">
+        <span class="year-badge">2025 - 2026</span>
+        <span class="org-category-tag">Organisasi Resmi</span>
+      </div>
+      <h3 class="role-title">Sekretaris 1</h3>
+      <h4 class="org-title">Language Commission — Al-Madienah Islamic Boarding School</h4>
+      <p class="role-summary">Memimpin tata kelola administrasi tahunan organisasi dan koordinasi lintas divisi program bahasa santri.</p>
+      <div class="duties-list">
+        <span class="duties-heading">Tanggung Jawab & Kontribusi Utama:</span>
+        <ul><li>Memimpin tata kelola persuratan dinas dan perizinan resmi organisasi.</li><li>Merancang dan menerapkan digitalisasi master pengarsipan dokumen dan sertifikat.</li><li>Mengoordinasikan alur administrasi lintas divisi kebahasaan santri.</li></ul>
+      </div>
+      <div class="tag-cloud"><span class="chip">Sekretaris 1</span><span class="chip">Tata Kelola Dinas</span><span class="chip">Digitalisasi Arsip</span><span class="chip">Koordinasi Lintas Divisi</span></div>
+    </article><article class="experience-card" data-index="1">
+      <div class="card-header-bar">
+        <span class="year-badge">2025 - 2026</span>
+        <span class="org-category-tag">Organisasi Resmi</span>
+      </div>
+      <h3 class="role-title">Sekretaris 1</h3>
+      <h4 class="org-title">PMR Wira Unit MAN 4 Jombang</h4>
+      <p class="role-summary">Mengatur tata persuratan legalitas kegiatan kemanusiaan dan relawan PMR tingkat wira.</p>
+      <div class="duties-list">
+        <span class="duties-heading">Tanggung Jawab & Kontribusi Utama:</span>
+        <ul><li>Mengelola persuratan izin dispensasi sekolah dan legalitas kegiatan relawan.</li><li>Mengelola basis data anggota aktif dan rekapitulasi presensi pelatihan berkala.</li><li>Menyusun proposal dan laporan program bakti sosial kemanusiaan.</li></ul>
+      </div>
+      <div class="tag-cloud"><span class="chip">Sekretaris 1</span><span class="chip">Database Anggota</span><span class="chip">Dispensasi &amp; Legalitas</span><span class="chip">Proposal Sosial</span></div>
+    </article><article class="experience-card" data-index="2">
+      <div class="card-header-bar">
+        <span class="year-badge">2024 - 2025</span>
+        <span class="org-category-tag">Organisasi Resmi</span>
+      </div>
+      <h3 class="role-title">Sekretaris Umum</h3>
+      <h4 class="org-title">Language Commission — Al-Madienah Islamic Boarding School</h4>
+      <p class="role-summary">Mengelola birokrasi utama organisasi, persidangan resmi, dan pelaporan pertanggungjawaban tahunan.</p>
+      <div class="duties-list">
+        <span class="duties-heading">Tanggung Jawab & Kontribusi Utama:</span>
+        <ul><li>Menyusun agenda sidang resmi organisasi dan notulensi rapat kerja pleno.</li><li>Menyusun dan menerbitkan Laporan Pertanggungjawaban (LPJ) kepengurusan tahunan.</li><li>Mengawal regulasi dan tertib administrasi persuratan santri.</li></ul>
+      </div>
+      <div class="tag-cloud"><span class="chip">Sekretaris Umum</span><span class="chip">Notulensi Sidang</span><span class="chip">Penyusunan LPJ</span><span class="chip">Birokrasi Organisasi</span></div>
+    </article><article class="experience-card" data-index="3">
+      <div class="card-header-bar">
+        <span class="year-badge">2023 - 2024</span>
+        <span class="org-category-tag">Organisasi Resmi</span>
+      </div>
+      <h3 class="role-title">Humas 1 (Hubungan Masyarakat)</h3>
+      <h4 class="org-title">PMR Wira Unit MAN 4 Jombang</h4>
+      <p class="role-summary">Mengoordinasikan komunikasi eksternal dengan PMI Cabang, instansi mitra, dan masyarakat umum.</p>
+      <div class="duties-list">
+        <span class="duties-heading">Tanggung Jawab & Kontribusi Utama:</span>
+        <ul><li>Menjadi narahubung resmi kegiatan donor darah dan kemanusiaan dengan PMI Cabang Jombang.</li><li>Memimpin kampanye edukasi kesehatan remaja dan publikasi media sosial unit.</li><li>Menjalin relasi strategis dengan organisasi kepalangmerahan antar-sekolah.</li></ul>
+      </div>
+      <div class="tag-cloud"><span class="chip">Humas 1</span><span class="chip">Public Relations</span><span class="chip">Kemitraan PMI</span><span class="chip">Komunikasi Publik</span></div>
+    </article>
+      </div>
+    </section>
+
+    <!-- Kepanitiaan Section -->
+    <section id="kepanitiaan" class="section" aria-labelledby="heading-kepanitiaan">
+      <div class="section-header">
+        <h2 id="heading-kepanitiaan" class="section-title">Pengalaman Kepanitiaan</h2>
+        <p class="section-desc">Kepanitiaan acara dan kegiatan yang pernah dijalankan.</p>
+      </div>
+      <div class="cards-grid">
+        <article class="experience-card event-card" data-index="0">
+      <div class="card-header-bar">
+        <span class="year-badge highlight">2025 &amp; 2026</span>
+        <span class="org-category-tag">Kepanitiaan Event</span>
+      </div>
+      <h3 class="role-title">Sekretaris 1 (2 Periode Berturut-turut)</h3>
+      <h4 class="org-title">Kepanitiaan Language Fair — Al-Madienah Islamic Boarding School</h4>
+      <p class="role-summary">Master administrator festival bahasa tingkat pelajar se-Jawa Timur.</p>
+      <div class="duties-list">
+        <span class="duties-heading">Cakupan Kerja & Pencapaian:</span>
+        <ul><li>Mengelola master administrasi festival: surat perizinan instansi, undangan juri, dan delegasi peserta.</li><li>Merekapitulasi database pendaftaran peserta kompetisi se-Jawa Timur secara digital.</li><li>Menyusun proposal sponsorship, teknis rundown acara, dan penerbitan sertifikat digital.</li></ul>
+      </div>
+      <div class="tag-cloud"><span class="chip event-chip">Sekretaris 1</span><span class="chip event-chip">Tingkat Jawa Timur</span><span class="chip event-chip">Master Administrasi</span><span class="chip event-chip">Proposal &amp; Rundown</span></div>
+    </article><article class="experience-card event-card" data-index="1">
+      <div class="card-header-bar">
+        <span class="year-badge highlight">2025 &amp; 2026</span>
+        <span class="org-category-tag">Kepanitiaan Event</span>
+      </div>
+      <h3 class="role-title">Sekretaris 1 (2 Edisi: Vol. 7 &amp; Vol. 8)</h3>
+      <h4 class="org-title">Kepanitiaan Khitobah Kubro — Al-Madienah Islamic Boarding School</h4>
+      <p class="role-summary">Penanggung jawab administrasi dan legalitas kompetisi pidato publik santri.</p>
+      <div class="duties-list">
+        <span class="duties-heading">Cakupan Kerja & Pencapaian:</span>
+        <ul><li>Menyiapkan berkas perizinan pesantren, berita acara dewan juri, dan lembar penilaian lomba.</li><li>Mengoordinasikan alur persuratan resmi kepada dewan pembimbing dan pengasuh pondok.</li><li>Menyusun Laporan Pertanggungjawaban (LPJ) kegiatan secara menyeluruh pasca acara.</li></ul>
+      </div>
+      <div class="tag-cloud"><span class="chip event-chip">Sekretaris 1</span><span class="chip event-chip">Berita Acara Juri</span><span class="chip event-chip">Legalitas Pesantren</span><span class="chip event-chip">Penyusunan LPJ</span></div>
+    </article>
+      </div>
+    </section>
+
+    <!-- Sertifikasi Section (Highlight) -->
+    <section id="sertifikasi" class="section" aria-labelledby="heading-sertifikasi">
+      <div class="section-header">
+        <span class="section-kicker">Achievement</span>
+        <h2 id="heading-sertifikasi" class="section-title">Sertifikasi & Prestasi</h2>
+        <p class="section-desc">Sertifikasi pelatihan, partisipasi kegiatan, dan penghargaan.</p>
+      </div>
+      
+      
+    <div class="filter-bar" role="tablist" aria-label="Kategori Sertifikasi">
+      <button type="button" class="filter-btn active" data-filter="all" role="tab" aria-selected="true">Semua (6)</button>
+      <button type="button" class="filter-btn" data-filter="lomba" role="tab" aria-selected="false">Sertifikat Pelatihan & Lomba</button>
+      <button type="button" class="filter-btn" data-filter="panitia" role="tab" aria-selected="false">Sertifikat Panitia</button>
+    </div>
+    <div class="cert-grid">
+      
+        <article class="cert-card" data-category="lomba">
+          <div class="cert-media-wrap">
+            
+              <img src="./assets/certificates/prodistik.webp" 
+                   alt="Sertifikat Sertifikat Program Terapan TIK (PRODISTIK ITS)" 
+                   class="cert-img" 
+                   loading="lazy" 
+                   width="600" 
+                   height="424"
+                   onclick="window.openLightbox('./assets/certificates/prodistik.webp', 'Sertifikat Program Terapan TIK (PRODISTIK ITS)')">
+              <button type="button" class="enlarge-btn" aria-label="Perbesar sertifikat Sertifikat Program Terapan TIK (PRODISTIK ITS)" onclick="window.openLightbox('./assets/certificates/prodistik.webp', 'Sertifikat Program Terapan TIK (PRODISTIK ITS)')">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                Perbesar
+              </button>
+            
+          </div>
+          <div class="cert-body">
+            <div class="cert-meta">
+              <span class="cert-year">2026</span>
+              <span class="cert-badge">Sertifikat Pelatihan &amp; Keahlian</span>
+            </div>
+            <h3 class="cert-title">Sertifikat Program Terapan TIK (PRODISTIK ITS)</h3>
+            <p class="cert-issuer">PRODISTIK Institut Teknologi Sepuluh Nopember (ITS) Surabaya &amp; MAN 4 Jombang</p>
+            <p class="cert-desc">Sertifikasi keahlian terapan bidang Teknologi Informasi dan Komunikasi dengan kompetensi pemrograman spreadsheet, komputasi terapan, dan administrasi digital perkantoran.</p>
+            <div class="tag-cloud"><span class="chip">PRODISTIK ITS</span><span class="chip">TIK Terapan</span><span class="chip">Spreadsheet &amp; Database</span><span class="chip">Kompetensi Lulusan</span></div>
+          </div>
+        </article>
+      
+        <article class="cert-card" data-category="lomba">
+          <div class="cert-media-wrap">
+            
+              <img src="./assets/certificates/procommit_excel.webp" 
+                   alt="Sertifikat Finalis Lomba Pemrograman Excel PROCOMMIT V13" 
+                   class="cert-img" 
+                   loading="lazy" 
+                   width="600" 
+                   height="424"
+                   onclick="window.openLightbox('./assets/certificates/procommit_excel.webp', 'Finalis Lomba Pemrograman Excel PROCOMMIT V13')">
+              <button type="button" class="enlarge-btn" aria-label="Perbesar sertifikat Finalis Lomba Pemrograman Excel PROCOMMIT V13" onclick="window.openLightbox('./assets/certificates/procommit_excel.webp', 'Finalis Lomba Pemrograman Excel PROCOMMIT V13')">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                Perbesar
+              </button>
+            
+          </div>
+          <div class="cert-body">
+            <div class="cert-meta">
+              <span class="cert-year">2023</span>
+              <span class="cert-badge">Sertifikat Prestasi &amp; Kompetisi</span>
+            </div>
+            <h3 class="cert-title">Finalis Lomba Pemrograman Excel PROCOMMIT V13</h3>
+            <p class="cert-issuer">PRODISTIK Institut Teknologi Sepuluh Nopember (ITS) Surabaya</p>
+            <p class="cert-desc">Penghargaan sebagai Finalis Lomba Pemrograman Excel PROCOMMIT V13 Tingkat Provinsi Jawa Timur yang diselenggarakan oleh PRODISTIK ITS Surabaya.</p>
+            <div class="tag-cloud"><span class="chip">Finalis Jawa Timur</span><span class="chip">Pemrograman Excel</span><span class="chip">PROCOMMIT V13</span><span class="chip">Analisis Data</span></div>
+          </div>
+        </article>
+      
+        <article class="cert-card" data-category="lomba">
+          <div class="cert-media-wrap">
+            
+              <img src="./assets/certificates/jayapalmera.webp" 
+                   alt="Sertifikat Delegasi Jayapalmera XI Tingkat Nasional" 
+                   class="cert-img" 
+                   loading="lazy" 
+                   width="600" 
+                   height="424"
+                   onclick="window.openLightbox('./assets/certificates/jayapalmera.webp', 'Delegasi Jayapalmera XI Tingkat Nasional')">
+              <button type="button" class="enlarge-btn" aria-label="Perbesar sertifikat Delegasi Jayapalmera XI Tingkat Nasional" onclick="window.openLightbox('./assets/certificates/jayapalmera.webp', 'Delegasi Jayapalmera XI Tingkat Nasional')">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                Perbesar
+              </button>
+            
+          </div>
+          <div class="cert-body">
+            <div class="cert-meta">
+              <span class="cert-year">2025</span>
+              <span class="cert-badge">Sertifikat Prestasi &amp; Pelatihan</span>
+            </div>
+            <h3 class="cert-title">Delegasi Jayapalmera XI Tingkat Nasional</h3>
+            <p class="cert-issuer">KSR PMI Unit Universitas Negeri Malang (UM)</p>
+            <p class="cert-desc">Sertifikat partisipasi sebagai delegasi resmi kontingen dalam Jumpa Karya Palang Merah Remaja (Jayapalmera) XI Tingkat Nasional di Universitas Negeri Malang.</p>
+            <div class="tag-cloud"><span class="chip">Tingkat Nasional</span><span class="chip">PMR Wira</span><span class="chip">Kepalangmerahan</span><span class="chip">Delegasi Resmi</span></div>
+          </div>
+        </article>
+      
+        <article class="cert-card" data-category="lomba">
+          <div class="cert-media-wrap">
+            
+              <img src="./assets/certificates/toscas.webp" 
+                   alt="Sertifikat Peserta Try Out SNBT &amp; Campus Sharing (TOSCAS) 2026" 
+                   class="cert-img" 
+                   loading="lazy" 
+                   width="600" 
+                   height="424"
+                   onclick="window.openLightbox('./assets/certificates/toscas.webp', 'Peserta Try Out SNBT &amp; Campus Sharing (TOSCAS) 2026')">
+              <button type="button" class="enlarge-btn" aria-label="Perbesar sertifikat Peserta Try Out SNBT &amp; Campus Sharing (TOSCAS) 2026" onclick="window.openLightbox('./assets/certificates/toscas.webp', 'Peserta Try Out SNBT &amp; Campus Sharing (TOSCAS) 2026')">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                Perbesar
+              </button>
+            
+          </div>
+          <div class="cert-body">
+            <div class="cert-meta">
+              <span class="cert-year">2026</span>
+              <span class="cert-badge">Sertifikat Partisipasi Akademik</span>
+            </div>
+            <h3 class="cert-title">Peserta Try Out SNBT &amp; Campus Sharing (TOSCAS) 2026</h3>
+            <p class="cert-issuer">Ikatan Mahasiswa Jombang Universitas Negeri Surabaya (IMJ UNESA)</p>
+            <p class="cert-desc">Sertifikat kepesertaan dalam Try Out Nasional SNBT dan Campus Sharing (TOSCAS) 2026 yang diselenggarakan oleh Ikatan Mahasiswa Jombang UNESA.</p>
+            <div class="tag-cloud"><span class="chip">IMJ UNESA</span><span class="chip">Try Out SNBT</span><span class="chip">Partisipasi</span><span class="chip">Akademik</span></div>
+          </div>
+        </article>
+      
+        <article class="cert-card" data-category="panitia">
+          <div class="cert-media-wrap">
+            
+              <div class="cert-placeholder">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                <span>Arsip Administrasi</span>
+              </div>
+            
+          </div>
+          <div class="cert-body">
+            <div class="cert-meta">
+              <span class="cert-year">2025 - 2026</span>
+              <span class="cert-badge">Sertifikat &amp; Rekam Jejak Kepanitiaan</span>
+            </div>
+            <h3 class="cert-title">Sekretaris 1 Kepanitiaan Language Fair (2 Periode: 2025 &amp; 2026)</h3>
+            <p class="cert-issuer">Al-Madienah Islamic Boarding School</p>
+            <p class="cert-desc">Memimpin tata kelola administrasi master festival kebahasaan tingkat Jawa Timur: perizinan dinas, korespondensi delegasi, undangan juri kehormatan, dan rekapitulasi data ratusan peserta.</p>
+            <div class="tag-cloud"><span class="chip">Sekretaris 1</span><span class="chip">Festival Jawa Timur</span><span class="chip">Master Administrasi</span><span class="chip">Perizinan &amp; LPJ</span></div>
+          </div>
+        </article>
+      
+        <article class="cert-card" data-category="panitia">
+          <div class="cert-media-wrap">
+            
+              <div class="cert-placeholder">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                <span>Arsip Administrasi</span>
+              </div>
+            
+          </div>
+          <div class="cert-body">
+            <div class="cert-meta">
+              <span class="cert-year">2025 - 2026</span>
+              <span class="cert-badge">Sertifikat &amp; Rekam Jejak Kepanitiaan</span>
+            </div>
+            <h3 class="cert-title">Sekretaris 1 Kepanitiaan Khitobah Kubro Vol. 7 &amp; Vol. 8</h3>
+            <p class="cert-issuer">Al-Madienah Islamic Boarding School</p>
+            <p class="cert-desc">Mengelola persuratan birokrasi pesantren, berita acara dewan juri, draft proposal, dan Laporan Pertanggungjawaban (LPJ) resmi pada dua edisi berturut-turut.</p>
+            <div class="tag-cloud"><span class="chip">Sekretaris 1</span><span class="chip">Kompetisi Pidato Publik</span><span class="chip">Notulensi &amp; Berita Acara</span><span class="chip">LPJ Resmi</span></div>
+          </div>
+        </article>
+      
+    </div>
+  
+    </section>
+
+    <!-- Pendidikan Section -->
+    <section id="pendidikan" class="section" aria-labelledby="heading-pendidikan">
+      <div class="section-header">
+        <h2 id="heading-pendidikan" class="section-title">Pendidikan</h2>
+      </div>
+      <div class="edu-grid">
+    <article class="edu-card">
+      <span class="year-badge">2026 - Sekarang</span>
+      <h3 class="edu-role">S1 Pendidikan Teknologi Informasi</h3>
+      <h4 class="edu-org">Universitas Negeri Surabaya (UNESA)</h4>
+      <ul><li>Fakultas Teknik | NIM: 26050974056.</li><li>PJ (Penanggung Jawab) Mata Kuliah Basis Data (Kelas 2026D) — mengoordinasikan komunikasi akademik antara dosen pengampu dan mahasiswa satu rombel.</li></ul>
+    </article>
+  
+    <article class="edu-card">
+      <span class="year-badge">2023 - 2026</span>
+      <h3 class="edu-role">Madrasah Aliyah Negeri (MAN) 4 Jombang</h3>
+      <h4 class="edu-org">Pondok Pesantren Mamba&#39;ul Ma&#39;arif Denanyar</h4>
+      <ul><li>Lulus dengan Nilai Rata-rata Ijazah 89.24.</li><li>Lulusan Program Terapan Bidang TIK (PRODISTIK) kerja sama resmi MAN 4 Jombang &amp; ITS Surabaya.</li></ul>
+    </article>
+  </div>
+    </section>
+
+    <!-- Keterampilan Section -->
+    <section id="keterampilan" class="section" aria-labelledby="heading-keterampilan">
+      <div class="section-header">
+        <span class="section-kicker">What I Can Do</span>
+        <h2 id="heading-keterampilan" class="section-title">Keahlian & Alat</h2>
+      </div>
+      <div class="skills-grid">
+    <div class="skill-category-card">
+      <h3 class="skill-cat-title">Administrasi &amp; Kesekretariatan</h3>
+      <div class="skill-chips"><span class="skill-pill">Tata Kelola Persuratan Resmi</span><span class="skill-pill">Notulensi Rapat &amp; Sidang</span><span class="skill-pill">Penyusunan Proposal &amp; LPJ</span><span class="skill-pill">Digitalisasi Pengarsipan</span><span class="skill-pill">Alur Birokrasi &amp; Legalitas Acara</span></div>
+    </div>
+  
+    <div class="skill-category-card">
+      <h3 class="skill-cat-title">Komunikasi &amp; Kehumasan</h3>
+      <div class="skill-chips"><span class="skill-pill">Public Relations</span><span class="skill-pill">Komunikasi Publik &amp; Eksternal</span><span class="skill-pill">Negosiasi &amp; Hubungan Mitra</span><span class="skill-pill">Koordinasi Tim Lapangan</span><span class="skill-pill">Pendampingan Delegasi</span></div>
+    </div>
+  
+    <div class="skill-category-card">
+      <h3 class="skill-cat-title">Software &amp; Produktivitas Perkantoran</h3>
+      <div class="skill-chips"><span class="skill-pill">Microsoft Word (Dokumen Formal Tingkat Lanjut)</span><span class="skill-pill">Microsoft Excel (Formula Rumus, Spreadsheet, Data Analysis)</span><span class="skill-pill">Google Workspace (Docs, Sheets, Forms, Drive)</span><span class="skill-pill">Microsoft PowerPoint</span></div>
+    </div>
+  
+    <div class="skill-category-card">
+      <h3 class="skill-cat-title">Teknologi Informasi &amp; Bahasa</h3>
+      <div class="skill-chips"><span class="skill-pill">Logika Komputasi &amp; Pemrograman Dasar</span><span class="skill-pill">Sistem Basis Data Relasional (SQL)</span><span class="skill-pill">Administrasi Sistem Operasi</span><span class="skill-pill">Bahasa Indonesia (Native)</span><span class="skill-pill">Bahasa Inggris (Aktif)</span></div>
+    </div>
+  </div>
+    </section>
+
+    <!-- Kontak Section -->
+    <section id="kontak" class="section" aria-labelledby="heading-kontak">
+      <div class="section-header">
+        <h2 id="heading-kontak" class="section-title">Kontak</h2>
+        <p class="section-desc">Tautan dan kontak yang dapat dihubungi.</p>
+      </div>
+      <div class="contact-links-wrap">
+        <a href="https://github.com/mahdiwafy" class="contact-pill-btn" target="_blank" rel="noopener noreferrer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          <span>GitHub</span>
+          <span class="contact-value">github.com/mahdiwafy</span>
+        </a>
+
+        <a href="https://linkedin.com/in/mahdiwafy" class="contact-pill-btn" target="_blank" rel="noopener noreferrer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          <span>LinkedIn</span>
+          <span class="contact-value">linkedin.com/in/mahdiwafy</span>
+        </a>
+
+        <a href="./assets/cv/CV_ATS_Taufiq_Mahdi_Wafy.pdf" class="contact-pill-btn" target="_blank" rel="noopener noreferrer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          <span>CV ATS Resmi</span>
+          <span class="contact-value">Unduh PDF Resume</span>
+        </a>
+
+        <a href="mailto:wafy.081107@gmail.com" class="contact-pill-btn" target="_blank" rel="noopener noreferrer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>Email Pribadi</span>
+          <span class="contact-value">wafy.081107@gmail.com</span>
+        </a>
+
+        <a href="mailto:26050974056@mhs.unesa.ac.id" class="contact-pill-btn" target="_blank" rel="noopener noreferrer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          <span>Email SSO Kampus</span>
+          <span class="contact-value">26050974056@mhs.unesa.ac.id</span>
+        </a>
+
+        <a href="https://instagram.com/mahdiwafy" class="contact-pill-btn" target="_blank" rel="noopener noreferrer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          <span>Instagram</span>
+          <span class="contact-value">@mahdiwafy</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Accessible Lightbox Modal -->
+  <dialog id="certLightbox" class="lightbox-modal" aria-labelledby="modalCertTitle" onclick="if (event.target === this) window.closeLightbox()">
+    <div class="lightbox-container" onclick="event.stopPropagation()">
+      <header class="lightbox-header">
+        <h3 id="modalCertTitle" class="lightbox-title">Pratinjau Sertifikat</h3>
+        <button type="button" class="lightbox-close-btn" aria-label="Tutup pratinjau sertifikat (ESC)" onclick="window.closeLightbox()">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </header>
+      <div class="lightbox-body">
+        <div class="lightbox-img-wrap skeleton-loader" id="modalImgWrap">
+          <img id="modalCertImg" src="" alt="Sertifikat besar" class="lightbox-img" onload="document.getElementById('modalImgWrap').classList.remove('skeleton-loader')">
+        </div>
+      </div>
+      <footer class="lightbox-footer">
+        <span class="lightbox-hint">Tekan ESC atau klik area luar untuk menutup</span>
+      </footer>
+    </div>
+  </dialog>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-copy">© 2026 Taufiq Mahdi Wafy. Semua rekam jejak terverifikasi asli.</p>
+      <a href="#top" class="back-to-top-btn" aria-label="Kembali ke atas">
+        <span>Kembali ke Atas</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+      </a>
+    </div>
+  </footer>
+
+  <script>(() => {
+  // Theme Management with robust error handling
+  const root = document.documentElement;
+  const themeBtn = document.getElementById('themeToggle');
+  const themeText = document.getElementById('themeText');
+  const systemDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+  function getTheme() {
+    try {
+      const saved = localStorage.getItem('wafy-theme');
+      if (saved === 'light' || saved === 'dark') return saved;
+    } catch (_) {}
+    return systemDark.matches ? 'dark' : 'light';
+  }
+
+  function applyTheme(theme) {
+    root.setAttribute('data-theme', theme);
+    if (themeText) {
+      themeText.textContent = theme === 'dark' ? 'Terang' : 'Gelap';
+    }
+  }
+
+  let currentTheme = getTheme();
+  applyTheme(currentTheme);
+
+  if (themeBtn) {
+    themeBtn.addEventListener('click', () => {
+      currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      try {
+        localStorage.setItem('wafy-theme', currentTheme);
+      } catch (_) {}
+      applyTheme(currentTheme);
+    });
+  }
+
+  systemDark.addEventListener('change', (e) => {
+    try {
+      if (!localStorage.getItem('wafy-theme')) {
+        currentTheme = e.matches ? 'dark' : 'light';
+        applyTheme(currentTheme);
+      }
+    } catch (_) {}
+  });
+
+  // Mobile Drawer Navigation
+  const mobileBtn = document.getElementById('mobileMenuBtn');
+  const mobileDrawer = document.getElementById('mobileDrawer');
+
+  if (mobileBtn && mobileDrawer) {
+    mobileBtn.addEventListener('click', () => {
+      const isExpanded = mobileBtn.getAttribute('aria-expanded') === 'true';
+      mobileBtn.setAttribute('aria-expanded', !isExpanded);
+      mobileDrawer.hidden = isExpanded;
+    });
+
+    // Close on link click
+    mobileDrawer.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileBtn.setAttribute('aria-expanded', 'false');
+        mobileDrawer.hidden = true;
+      });
+    });
+  }
+
+  // Active Navigation Highlighting with IntersectionObserver
+  const sections = document.querySelectorAll('section[id]');
+  const desktopLinks = document.querySelectorAll('.desktop-nav .nav-item');
+  const mobileLinks = document.querySelectorAll('.mobile-nav .mob-nav-item');
+
+  if ('IntersectionObserver' in window && sections.length > 0) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          desktopLinks.forEach(link => {
+            if (link.getAttribute('href') === `#${id}`) {
+              link.classList.add('active');
+            } else {
+              link.classList.remove('active');
+            }
+          });
+          mobileLinks.forEach(link => {
+            if (link.getAttribute('href') === `#${id}`) {
+              link.classList.add('active');
+            } else {
+              link.classList.remove('active');
+            }
+          });
+        }
+      });
+    }, {
+      rootMargin: '-20% 0px -60% 0px',
+      threshold: 0
+    });
+
+    sections.forEach(sec => observer.observe(sec));
+  }
+
+  // Certificate Filter Tabs
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const certCards = document.querySelectorAll('.cert-card');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
+
+      const filter = btn.getAttribute('data-filter');
+      certCards.forEach(card => {
+        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  });
+
+  // Accessible Lightbox Dialog Modal
+  const dialog = document.getElementById('certLightbox');
+  const modalImg = document.getElementById('modalCertImg');
+  const modalTitle = document.getElementById('modalCertTitle');
+  const modalWrap = document.getElementById('modalImgWrap');
+
+  window.openLightbox = function(src, title) {
+    if (!dialog || !modalImg) return;
+    modalTitle.textContent = title || 'Pratinjau Sertifikat';
+    modalWrap.classList.add('skeleton-loader');
+    modalImg.src = src;
+    if (typeof dialog.showModal === 'function') {
+      dialog.showModal();
+    } else {
+      dialog.setAttribute('open', '');
+    }
+  };
+
+  window.closeLightbox = function() {
+    if (!dialog) return;
+    if (typeof dialog.close === 'function') {
+      dialog.close();
+    } else {
+      dialog.removeAttribute('open');
+    }
+  };
+
+  // Close on ESC key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && dialog && dialog.open) {
+      window.closeLightbox();
+    }
+  });
+
+})();
+</script>
+</body>
+</html>
