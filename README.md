@@ -1,6 +1,8 @@
 # Taufiq Mahdi Wafy — Official Web Portfolio ⚡
 
 [![Live Portfolio](https://img.shields.io/badge/Live-mahdiwafy.my.id-2563eb?style=for-the-badge&logo=cloudflare&logoColor=white)](https://mahdiwafy.my.id/)
+[![GitHub Pages](https://img.shields.io/badge/Hosted_on-GitHub_Pages-181717?style=for-the-badge&logo=github&logoColor=white)](https://mahdiwafy.github.io/portfolio/)
+[![Repo](https://img.shields.io/badge/Repo-mahdiwafy%2Fportfolio-0f172a?style=for-the-badge&logo=git&logoColor=white)](https://github.com/mahdiwafy/portfolio)
 [![UNESA](https://img.shields.io/badge/UNESA-Informatika%202026-ea580c?style=for-the-badge)](https://unesa.ac.id/)
 [![Ameliorer 11](https://img.shields.io/badge/Ameliorer-Kelompok%2017__Subnet-10b981?style=for-the-badge)](https://himtiunesa.id/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
@@ -19,7 +21,9 @@ Website ini sekaligus disusun sebagai pemenuhan penugasan resmi **Web Portofolio
 * **Fakultas / Universitas:** Fakultas Teknik, Universitas Negeri Surabaya (UNESA)
 * **Kelompok Ameliorer:** Kelompok 17_Subnet (Ameliorer 11)
 * **Peran Akademik:** Penanggung Jawab (PJ) Mata Kuliah Sistem Basis Data (Kelas 2026D)
-* **Situs Web Live:** [https://mahdiwafy.my.id](https://mahdiwafy.my.id)
+* **Situs Web Live (domain utama):** [https://mahdiwafy.my.id](https://mahdiwafy.my.id)
+* **Situs Web Live (GitHub Pages):** [https://mahdiwafy.github.io/portfolio](https://mahdiwafy.github.io/portfolio)
+* **Repositori Publik:** [https://github.com/mahdiwafy/portfolio](https://github.com/mahdiwafy/portfolio)
 
 ---
 
@@ -90,6 +94,33 @@ Website portofolio ini mencakup seluruh komponen wajib sesuai Buku Panduan Penug
 
 3. **Buka browser:**
    Akses `http://localhost:8080` untuk melihat tampilan portofolio.
+
+---
+
+## 🌐 Hosting & Publikasi
+
+| Lingkungan | URL | Keterangan |
+| --- | --- | --- |
+| Domain utama | https://mahdiwafy.my.id | Server mandiri Linux (Caddy + Cloudflare Tunnel, HTTP/2 + TLS otomatis) |
+| GitHub Pages | https://mahdiwafy.github.io/portfolio/ | Build statis langsung dari branch `main` repositori ini |
+| Repositori | https://github.com/mahdiwafy/portfolio | Kode sumber publik (HTML, CSS, JS, aset, screenshot bukti, laporan) |
+
+Deploy ke GitHub Pages berjalan otomatis setiap kali ada `git push` ke branch `main` (Settings → Pages → Deploy from a branch → `main` / root).
+
+### Struktur Berkas
+
+```text
+portfolio/
+├── index.html                # Halaman utama portofolio (semantic HTML5, CSS & JS ter-inline)
+├── styles.css                # Stylesheet sumber (design tokens, dark/light mode)
+├── main.js                   # Interaksi: theme switcher, lightbox sertifikat, drawer mobile
+├── robots.txt                # Konfigurasi crawler
+├── portfolio-offline.html    # Versi offline satu berkas
+├── assets/                   # Foto profil, font WOFF2, sertifikat WebP, CV ATS (PDF)
+├── screenshots/              # Bukti tangkapan layar tiap bagian (About, Projects, Skills, dll.)
+├── laporan_web.html          # Laporan penugasan Web Portofolio Ameliorer Day 5
+└── README.md
+```
 
 ---
 
