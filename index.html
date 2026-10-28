@@ -924,6 +924,65 @@
     /* Cegah pemilihan teks biasa pada halaman portofolio. */
     body, body * { -webkit-user-select: none; user-select: none; }
     body input, body textarea, body select, body [contenteditable="true"] { -webkit-user-select: text; user-select: text; }
+    /* Tata letak lebih ringkas agar konten utama tampil lebih cepat dan mudah dipindai. */
+    .hero { padding-top: clamp(58px, 7vw, 82px); padding-bottom: clamp(46px, 5vw, 64px); }
+    .hero-grid { gap: clamp(24px, 4vw, 44px); }
+    .hero-visual { min-height: 400px; }
+    .hero-bottom { margin-top: clamp(34px, 4vw, 48px); padding-top: 16px; }
+    .section { padding: clamp(72px, 8vw, 96px) 0; }
+    .about-grid { grid-template-columns: minmax(0, .72fr) minmax(0, 1.28fr); gap: clamp(36px, 6vw, 68px); }
+    .about-main p { margin-bottom: 16px; line-height: 1.78; }
+    @media (max-width: 800px) {
+      .hero { padding-top: 58px; padding-bottom: 48px; }
+      .hero-visual { min-height: 320px; }
+      .about-grid { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+      .section { padding: 68px 0; }
+    }
+    @media (max-width: 560px) {
+      .hero { padding: 38px 0 42px; }
+      .hero-bottom { margin-top: 32px; }
+      .section { padding: 56px 0; }
+      .about-grid { gap: 22px; }
+    }
+    .contact-main .btn {
+      color: #182017;
+      background: #fff;
+      border: 2px solid #fff;
+      box-shadow: 0 8px 22px rgba(24, 32, 23, .2);
+    }
+    .contact-main .btn:hover {
+      color: #182017;
+      background: #f2f8e9;
+      border-color: #f2f8e9;
+      box-shadow: 0 12px 28px rgba(24, 32, 23, .26);
+    }
+    .hero-visual { --chip-orbit-x: 190px; --chip-orbit-y: 205px; }
+    .hero-visual .portrait-card { width: min(76%, 240px); }
+    .hero-visual .float-chip.top,
+    .hero-visual .float-chip.bottom {
+      top: 50%;
+      right: auto;
+      bottom: auto;
+      left: 50%;
+      animation: chip-drift 26s cubic-bezier(.45, 0, .55, 1) infinite;
+      will-change: transform;
+    }
+    .hero-visual .float-chip.bottom { animation-delay: -13s; }
+    @keyframes chip-drift {
+      0%, 100% { transform: translate(-50%, -50%) translate(-12px, calc(var(--chip-orbit-y) * -1)); }
+      25% { transform: translate(-50%, -50%) translate(var(--chip-orbit-x), -30px); }
+      50% { transform: translate(-50%, -50%) translate(16px, var(--chip-orbit-y)); }
+      75% { transform: translate(-50%, -50%) translate(calc(var(--chip-orbit-x) * -1), 24px); }
+    }
+    @media (max-width: 800px) {
+      .hero-visual .portrait-card { width: min(70vw, 230px); }
+      .hero-visual .float-chip.top { top: 18px; right: 0; bottom: auto; left: auto; animation: chip-float 6s ease-in-out infinite; }
+      .hero-visual .float-chip.bottom { top: auto; right: auto; bottom: 12px; left: 0; animation: chip-float 6s ease-in-out -3s infinite; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-visual .float-chip.top,
+      .hero-visual .float-chip.bottom { animation: none !important; }
+    }
   </style>
 </head>
 <body>
@@ -933,7 +992,6 @@
       <div class="container">
         <div class="hero-grid">
           <div class="hero-content reveal is-visible">
-            <div class="availability"><span class="status-dot"></span><span class="availability-copy">Mahasiswa aktif · Pendidikan Teknologi Informasi · Universitas Negeri Surabaya</span></div>
             <p class="eyebrow">Halo, saya Taufiq Mahdi Wafy</p>
             <h1>Eksplorasi <span class="name-muted">teknologi,</span> web &amp; <span class="accent">data.</span></h1>
             <p class="hero-copy">Mahasiswa <strong>S1 Pendidikan Teknologi Informasi</strong> di Universitas Negeri Surabaya. Senang belajar pemrograman web, pemanfaatan tools AI, serta administrasi dan pengelolaan data.</p>
@@ -983,7 +1041,6 @@
           <div class="detail-grid">
             <div class="detail"><span class="detail-label">Nomor induk mahasiswa</span><div class="detail-value mono">26050974056</div></div>
             <div class="detail"><span class="detail-label">Program studi</span><div class="detail-value">S1 Pendidikan Teknologi Informasi</div></div>
-            <div class="detail"><span class="detail-label">Kelas perkuliahan</span><div class="detail-value mono">PTI 2026D</div></div>
             <div class="detail"><span class="detail-label">Kelompok Ameliorer</span><div class="detail-value">17-Subnet</div></div>
             <div class="detail"><span class="detail-label">Fakultas / Kampus</span><div class="detail-value">Fakultas Teknik · UNESA</div></div>
             <div class="detail"><span class="detail-label">Tahun Angkatan</span><div class="detail-value">2026 (Semester Gasal)</div></div>
@@ -1035,8 +1092,8 @@
           </article>
           <article class="project-card card reveal delay-1" data-category="web">
             <div class="project-top"><span class="project-index">PROJECT / 02</span><span class="project-glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M16 2v4M8 2v4M3 9h18M8 14l2 2 5-4"/></svg></span></div>
-            <h3>Portal Voting PDH Informatika 2026</h3>
-            <p>Website pemungutan suara pemilihan bahan seragam angkatan dengan login akun Google SSO UNESA (@mhs.unesa.ac.id).</p>
+            <h3>Portal Angkatan Informatika 2026</h3>
+            <p>Portal digital untuk mahasiswa Informatika angkatan 2026 yang memuat berbagai informasi dan layanan angkatan, termasuk fitur voting dengan akses Google SSO UNESA.</p>
             <div class="project-tags"><span class="tag">E-voting</span><span class="tag">SSO UNESA</span><span class="tag">Cloudflare Edge</span><span class="tag">FastAPI</span></div>
             <a class="project-link" href="https://informatics26.my.id/vote" target="_blank" rel="noopener noreferrer">Buka website <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
           </article>
@@ -1122,23 +1179,33 @@
         </div>
         <div class="timeline">
           <article class="timeline-item reveal">
-            <div class="timeline-top"><h3>Sekretaris 1 &amp; Sekretaris Umum — Language Commission</h3><span class="timeline-period">2024 — 2026</span></div>
-            <div class="timeline-sub">Organisasi Kesiswaan · MAN 4 Jombang</div>
+            <div class="timeline-top"><h3>Sekretaris 1 — Language Commission</h3><span class="timeline-period">2024 — 2025</span></div>
+            <div class="timeline-sub">Al-Madienah Islamic Boarding School</div>
+            <p class="timeline-desc">Bertanggung jawab atas administrasi organisasi, pembuatan surat resmi, arsip dokumen, notulensi rapat, dan penyusunan Laporan Pertanggungjawaban (LPJ).</p>
+          </article>
+          <article class="timeline-item reveal delay-1">
+            <div class="timeline-top"><h3>Sekretaris Umum — Language Commission</h3><span class="timeline-period">2025 — 2026</span></div>
+            <div class="timeline-sub">Al-Madienah Islamic Boarding School</div>
             <p class="timeline-desc">Bertanggung jawab atas administrasi organisasi, pembuatan surat resmi, arsip dokumen, notulensi rapat, dan penyusunan Laporan Pertanggungjawaban (LPJ).</p>
           </article>
           <article class="timeline-item reveal delay-1">
             <div class="timeline-top"><h3>Sekretaris 1 &amp; Humas 1 — PMR Wira MAN 4 Jombang</h3><span class="timeline-period">2023 — 2026</span></div>
-            <div class="timeline-sub">Palang Merah Remaja Unit Sekolah</div>
+            <div class="timeline-sub">Unit MAN 4 Jombang</div>
             <p class="timeline-desc">Mengurus surat perizinan, pendataan anggota aktif, serta menjadi narahubung koordinasi kegiatan donor darah bersama PMI Cabang Jombang.</p>
           </article>
           <article class="timeline-item reveal">
-            <div class="timeline-top"><h3>Sekretaris 1 — Kepanitiaan Language Fair</h3><span class="timeline-period">2025 — 2026</span></div>
-            <div class="timeline-sub">Festival Bahasa Pelajar</div>
+            <div class="timeline-top"><h3>Sekretaris 1 — Kepanitiaan Language Fair</h3><span class="timeline-period">2025</span></div>
+            <div class="timeline-sub">Kolaborasi Language Commission dengan MAN PK Jombang</div>
+            <p class="timeline-desc">Mengelola administrasi kegiatan, perizinan, undangan, rekapitulasi data pendaftaran peserta, dan pembuatan sertifikat kejuaraan.</p>
+          </article>
+          <article class="timeline-item reveal delay-1">
+            <div class="timeline-top"><h3>Sekretaris 1 — Kepanitiaan Language Fair</h3><span class="timeline-period">2026</span></div>
+            <div class="timeline-sub">Kolaborasi Language Commission dengan MAN PK Jombang</div>
             <p class="timeline-desc">Mengelola administrasi kegiatan, perizinan, undangan, rekapitulasi data pendaftaran peserta, dan pembuatan sertifikat kejuaraan.</p>
           </article>
           <article class="timeline-item reveal delay-1">
             <div class="timeline-top"><h3>Panitia Pelaksana &amp; Sekretaris Acara PMR</h3><span class="timeline-period">2024</span></div>
-            <div class="timeline-sub">Kegiatan Diklatsar &amp; Bakti Sosial PMR</div>
+            <div class="timeline-sub">Kepengurusan Organisasi dan Kegiatan PMR</div>
             <p class="timeline-desc">Menjadi sekretaris pelaksana kegiatan Diklatsar PMR, panitia donor darah, dan tim dokumentasi publikasi kegiatan sekolah.</p>
           </article>
         </div>
